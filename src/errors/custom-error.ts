@@ -7,6 +7,7 @@ export abstract class CustomError extends Error {
 
   constructor(message: string) {
     super(message);
+
     // Need this step to extend built in classes
     Object.setPrototypeOf(this, CustomError.prototype);
   }
